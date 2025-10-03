@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --mainColor: #8dae1c;
+    --sideColor: #697442;
+    --mainBodycolor: black;
+    --sideBodycolor: white;
+}
+
+body {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #8dae1c;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+/* ////////////////header///////////////////////// /*/
+.header {
+    background-image: linear-gradient(rgb(33, 33, 33), black);
+    padding: 15px 0px;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: #8dae1c 0px 1px 6px 2px;
+    padding: 0px 20px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container img {
+    height: 72px;
+}
+
+.header .container .links {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.header .container .links ul {
+    gap: 20px;
+}
+
+.header .container .links a {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    padding: 0px 15px;
+    transition: 0.3s;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header .container .links a:hover {
+    color: rgb(136, 140, 124)
+}
+/* ////////////////////////////tranings///////////// */
+.tranings .title {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tranings .title h2{
+    color: #8dae1c;
+}
+.tranings .title h2 img{
+    width: 30px;
+}
+.tranings .title p{
+    color: aliceblue;
+    padding: 20px 0px;
+    font-size: 18px;
+}
+.tranings .container{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,350px));
+    justify-content: space-between;
+    padding: 30px  ;
+    gap: 20px;
+}
+.tranings .container .card{
+    border:#8dae1c 1px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+.tranings .container .card:hover{
+    box-shadow: #8dae1c 0px 0px 14px 5px;
+}
+.tranings .container .card img{
+    height: 60%;
+    width: 100%;
+}
+.tranings .container .text {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+.tranings .container .text .desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding-bottom: 15px  ;
+}
+.tranings .container .text .desc h3{
+    color: #8dae1c;
+}
+.tranings .container .text .desc p{
+    color: aliceblue;
+}
+.tranings .container .text form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+.tranings .container .text form .input{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tranings .container .text form .input p{
+    color: #8dae1c;
+}
+.tranings .container .text form .input input{
+    width: 90px;
+    text-align: center;
+    outline: none;
+    background: black;
+    border: 1px solid #697442;
+    color: #8dae1c;
+    padding: 3px ;
+}
+.tranings .container .text form .lin{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.tranings .container .text form .lin input,.lin a{
+    color: #8dae1c;
+    background-color: black;
+    border: 1px #8dae1c solid;
+    border-radius: 20px;
+    padding: 10px 15px ;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.tranings .container .text form .lin input:hover,.lin a:hover{
+    color: black;
+    background-color: #8dae1c;
+
+}
+/* //////////////////////////////////////////////// */
+footer {
+    padding: 25px 0px;
+    background-image: linear-gradient(black, rgb(33, 33, 33));
+}
+
+footer .container {
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+}
+
+footer .container p {
+    color: #8dae1c;
+}
+
+footer .container p a {
+    color: aliceblue;
+    transition: 0.3s
+}
+
+footer .container p a:hover {
+    color: #697442;
+    text-decoration: underline;
+}
+
+/* /////////////////////////media////////////////// */
+@media (min-width: 993px) {
+    .container {
+        width: 1170px;
+
+    }
+
+    .moblin {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 310px;
+        overflow: visible;
+        position: relative;
+    }
+
+    .header .container {
+        height: 40px;
+        z-index: 1;
+    }
+
+    .header .container img {
+        height: 40px;
+    }
+
+    .moblin {
+        z-index: 1;
+    }
+
+    .moblin i {
+        color: #8dae1c;
+        font-size: 20px;
+    }
+
+    .megamenu {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        top: calc(100% + 50px);
+        background: #303030f0;
+        border-radius: 3px;
+        padding: 15px 0px;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: -1;
+    }
+
+    .megamenu::before {
+        content: "";
+        position: absolute;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #303030f0 transparent;
+        top: -19px;
+        right: 20px;
+    }
+
+    .megamenu ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .megamenu ul li {
+        padding: 10px;
+        width: 95%;
+        text-align: center;
+    }
+
+    .moblin:hover .megamenu {
+        opacity: 1;
+        top: calc(100% + 10px);
+    }
+
+    .yournotes .title h2 {
+        color: #8dae1c;
+        width: 300px;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .choose .container {
+        display: grid;
+        height: 150vh;
+        padding: 50px 20px;
+        justify-content: space-between;
+        gap: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .title img {
+        display: none;
+    }
+
+    .title p {
+        width: 250px;
+    }
+
+    .header .container .links a {
+        height: 40px;
+    }
+
+    footer .container p {
+        font-size: 13px;
+    }
+    .tranings .container .card {
+        height: 550px;
+    }
+    .tranings .container .text form .input input {
+        width: 70px;
+        text-align: center;
+        outline: none;
+        background: black;
+        border: 1px solid #697442;
+        color: #8dae1c;
+        padding: 3px;
+    }
+    .tranings .container {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+        justify-content: space-between;
+        padding: 30px;
+        gap: 30px;
+    }
+}
+@media (width: 320px) {
+    .container {
+        width: 260px;
+        overflow: visible;
+        position: relative;
+    }
+
+    .card {
+        width: 260px;
+    }
+
+    .card .text p {
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .card .text p {
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .title h2 {
+        color: #8dae1c;
+        font-size: 26px;
+        width: 263.2px;
+    }
+
+    footer .container p {
+        font-size: 11px;
+    }
+
+    .yournotes .container .card p {
+        font-size: 15px;
+    }
+
+    .choose .container {
+        display: grid;
+        height: fit-content;
+        padding: 0;
+        justify-content: space-between;
+        gap: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .tranings .container .text form .input input {
+        width: 60px;
+        text-align: center;
+        outline: none;
+        background: black;
+        border: 1px solid #697442;
+        color: #8dae1c;
+        padding: 3px;
+        font-size: 12px;
+    }
+    .tranings .container .text .desc {
+        width: 235px;
+    }
+    .tranings .container .text form .lin input,
+    .lin a {
+        padding: 10px;
+    }
+}
