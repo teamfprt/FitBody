@@ -180,10 +180,10 @@ footer .container p a:hover {
     }
 }
 
-@media (max-width: 992px) {
+@media (width: 1024px) {
     .container {
-        width: 970px;
-    }
+            width: 940px;
+        }
 }
 
 @media (max-width: 768px) {
